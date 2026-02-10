@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<title>کہانی بولتی ہے</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    text-align:center;
+}
+img{
+    width:100%;
+    max-width:900px;
+    display:block;
+    margin:auto;
+    user-select:none;
+    pointer-events:none;
+}
+</style>
+</head>
+
+<body oncontextmenu="return false">
+
+<div id="book"></div>
+
+<script>
+const TOTAL_PAGES = 276;
+
+let book = document.getElementById("book");
+
+for(let i=1; i<=TOTAL_PAGES; i++){
+    let num = String(i).padStart(3,'0');
+    let img = document.createElement("img");
+    img.src = num + ".webp";
+    img.loading="lazy";
+    book.appendChild(img);
+}
+</script>
+
+</body>
+</html>
